@@ -14,10 +14,32 @@
 </head>
 
 <body>
-    @include('inc.navbar')
 
-
-    <H1>Main Layout is here</H1>
+    <div class="container">
+        @include('inc.navbar')
+        <div class="row">
+            <div class="col-md-9">
+                @yield('content')
+            </div>
+            <div class="col-md-3">
+                @section('rightbar')
+                    <marquee behavior="" direction="">Testing default content</marquee>
+                @show
+            </div>
+        </div>
+        {{-- footer start --}}
+        <footer class="py-3 my-4">
+            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+            </ul>
+            <p class="text-center text-body-secondary">© 2024 Company, Inc</p>
+        </footer>
+        {{-- footer end --}}
+    </div>
 </body>
 
 </html>

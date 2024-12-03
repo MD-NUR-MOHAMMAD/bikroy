@@ -59,6 +59,6 @@ class ProfileController extends Controller
     }
     public function index()
     {
-        return view('layouts.main');
+        return view('inc.home');
     }
 }
