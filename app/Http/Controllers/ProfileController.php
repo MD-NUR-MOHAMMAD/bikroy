@@ -57,8 +57,4 @@ class ProfileController extends Controller
 
         return Redirect::to('/');
     }
-    public function index()
-    {
-        return view('inc.home');
-    }
 }
