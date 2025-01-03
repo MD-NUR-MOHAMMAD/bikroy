@@ -46,4 +46,59 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    /**
+     * Get the products that belong to the User
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function stores(): HasMany
+    {
+        return $this->hasMany(Store::class);
+    }
+
+    /**
+     * Get all of the reviews for the User
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function reviews(){
+        return $this->hasMany(Review::class);
+    }
+
+    /**
+     * Get all of the comments for the User
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function comments(){
+        return $this->hasMany(Comment::class);
+    }
+
+    /**
+     * Get all of the carts for the User
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function carts(){
+        return $this->hasMany(Cart::class);
+    }
+
+    /**
+     * Get all of the wishlists for the User
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function wishlists(){
+        return $this->hasMany(Wishlist::class);
+    }
+
+    /**
+     * Get all of the orders for the User
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function orders(){
+        return $this->hasMany(Order::class);
+    }
 }

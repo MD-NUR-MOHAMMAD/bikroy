@@ -8,7 +8,6 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        echo "retailer";
-        //return view('backend.retailer.layout.index');
+        return view('backend.retailer.layouts.dashboard');
     }
 }
