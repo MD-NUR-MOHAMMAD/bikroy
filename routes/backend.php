@@ -11,7 +11,6 @@ use Illuminate\Support\Facades\Route;
 */
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
-
 /*
 * Authorization
 */
@@ -26,6 +25,7 @@ Route::controller(CategoryController::class)->prefix('category')->name('category
     Route::get('/', 'index')->name('index');
     Route::get('/create', 'create')->name('create');
     Route::post('/store', 'store')->name('store');
+    Route::get('/show/{id}', 'show')->name('show');
     Route::get('/edit/{id}', 'edit')->name('edit');
     Route::post('/update/{id}', 'update')->name('update');
     Route::delete('/delete/{id}', 'destroy')->name('destroy');
